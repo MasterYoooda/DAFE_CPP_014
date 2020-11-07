@@ -4,7 +4,8 @@ int main ()
 {
     try
     {
-      calculate();
+      Calculator calc;
+      calc.calculate();
       keep_window_open();
       return 0;
     }
