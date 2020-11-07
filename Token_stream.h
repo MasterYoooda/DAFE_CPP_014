@@ -28,4 +28,4 @@ const string help = "help";
 const string Exit = "exit";
 const string showval = "show";
 
-#endif // TOKEN_STREAM_H
+#endif TOKEN_STREAM_H
