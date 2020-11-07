@@ -1,6 +1,4 @@
-#ifndef TOKEN_H
-#define TOKEN_H
-
+#pragma once
 #include "std_lib_facilities.h"
 
 struct Token
@@ -22,4 +20,4 @@ struct Token
   }
 };
 
-#endif TOKEN_H
+
