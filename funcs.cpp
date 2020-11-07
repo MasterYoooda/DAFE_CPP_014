@@ -1,9 +1,6 @@
 #include "funcs.h"
 
-Symbol_table s_table;
-Token_stream ts;
-
-double primary ()
+double Calculator::primary ()
 {
   Token t = ts.get();
   switch (t.kind)
@@ -39,7 +36,7 @@ double primary ()
   }
 }
 
-double term ()
+double Calculator::term ()
 {
   double left = primary();
   while (true)
@@ -64,7 +61,7 @@ double term ()
   }
 }
 
-double expression ()
+double Calculator::expression ()
 {
   double left = term();
   while (true)
@@ -85,7 +82,7 @@ double expression ()
   }
 }
 
-double declaration (Token let_or_const)
+double Calculator::declaration (Token let_or_const)
 {
   Token t = ts.get();
   if (t.kind != name)
@@ -102,7 +99,7 @@ double declaration (Token let_or_const)
     return s_table.define_name (var, expression(), true);
 }
 
-double statement ()
+double Calculator::statement()
 {
   Token t = ts.get();
   switch (t.kind)
@@ -116,16 +113,16 @@ double statement ()
   }
 }
 
-void clean_up_mess ()
+void Calculator::clean_up_mess ()
 {
   ts.ignore (print);
 }
 
-void printHelp(){
+void Calculator::printHelp(){
     cout << "Zdes mozhet byt vasha reklama :)" << endl;
 }
 
-void calculate ()
+void Calculator::calculate ()
 {
   s_table.define_name ("pi", 3.141592653589793, true);
   s_table.define_name ("e",  2.718281828459045, true);
