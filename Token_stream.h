@@ -1,6 +1,4 @@
-#ifndef TOKEN_STREAM_H
-#define TOKEN_STREAM_H
-
+#pragma once
 #include "Token.h"
 
 class Token_stream
@@ -27,5 +25,3 @@ const string declkey = "let";
 const string help = "help";
 const string Exit = "exit";
 const string showval = "show";
-
-#endif TOKEN_STREAM_H
