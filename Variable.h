@@ -22,4 +22,4 @@ public:
     void print_values();
 };
 
-#endif // VARIABLE_H
+#endif VARIABLE_H
