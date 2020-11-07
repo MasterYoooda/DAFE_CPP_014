@@ -1,5 +1,4 @@
-#ifndef VARIABLE_H
-#define VARIABLE_H
+#pragma once
 
 #include "std_lib_facilities.h"
 
@@ -22,4 +21,4 @@ public:
     void print_values();
 };
 
-#endif VARIABLE_H
+
